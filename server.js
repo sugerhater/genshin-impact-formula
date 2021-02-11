@@ -1,4 +1,6 @@
 const express = require("express");
+var session = require("express-session");
+
 // const db = require("../original-homework1/osu-col-fsf-pt-10-2020-u-c/14-Full-Stack/01-Activities/07-ORM-To-Sequelize/Solved/models/index.js");
 const db = require("./models")
 const app = express();
@@ -10,8 +12,8 @@ app.use(express.json());
 app.use(express.static("public"));
 
 app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
-app.use(passport.initialize());
-app.use(passport.session());
+// app.use(passport.initialize());
+// app.use(passport.session());
 
 const exphbs = require('express-handlebars');
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));

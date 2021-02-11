@@ -3,11 +3,13 @@ var path = require("path");
 module.exports = function(app) {
 
   app.get('/', function(req,res){
-    res.sendFile(path.join(__dirname,"../public/index.html"))
+    // res.sendFile(path.join(__dirname,"../public/index.html"))
+    res.render('index')
   });
 
   app.get('/adding', function(req,res){
-    res.sendFile(path.join(__dirname,"../public/adding.html"))
+    // res.sendFile(path.join(__dirname,"../public/adding.html"))
+    res.render('adding')
   });
 
   // app.get('/adding', function(req,res){
@@ -16,6 +18,7 @@ module.exports = function(app) {
   // });
 
   app.get('/damage',function(req,res){
-    res.json('damage calculate page')
+    // res.json('damage calculate page')
+    res.render('damage')
   })
 }
