@@ -1,4 +1,6 @@
 <h1>Adding</h1>
+<form id= "addingForm">
+
 <select id="name">
   <option value="Diluc">Diluc</option>
   <option value="Keqing">Keqing</option>
@@ -8,11 +10,42 @@
   <option value=""></option>
   <option value=""></option>
 </select>
-<label>Attack</label>
-<input type='text' id="attack">
+
+{{!-- <label>ascensionPhase</label> --}}
+<select id = "ascensionPhase">
+  <option value ="0">0</option>
+  <option value ="1">1</option>
+  <option value ="2">2</option>
+  <option value ="3">3</option>
+  <option value ="4">4</option>
+  <option value ="5">5</option>
+  <option value ="6">6</option>
+  <option value ="7">7</option>
+</select>
+
+<label>Level</label>
+<input type='text' id="level">
+
+<label>HP</label>
+<input type='text' id="HP">
+
+<label>ATK</label>
+<input type='text' id="ATK">
+
+<label>DEF</label>
+<input type='text' id="DEF">
+
+
+<label>Crit Rate</label>
+<input type='text' id="critRate">
+
+<label>Crit Damage</label>
+<input type='text' id="critDamage">
+{{!-- 
 <label></label>
-<input type='text' id="">
-<label></label>
-<input type='text' id="">
-<label></label>
-<input type='text' id="">
+<input type='text' id=""> --}}
+
+<button type = "submit" class= "btn" id = "submitButton">Add Stats</button>
+</form>
+
+<script src = "./js/adding.js"></script>
