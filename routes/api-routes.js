@@ -13,17 +13,19 @@ module.exports = function(app) {
   // POST route for saving a new todo. You can create a todo using the data on req.body
   app.post("/api/add", function(req, res) {
 
-    // db.Character.create(req.body).then((answer)=>{
-    db.Character.create({
-      name:req.body.name,
-      ascensionPhase:req.body.ascensionPhase,
-      level:req.body.level,
-      hp:req.body.hp,
-      atk:req.body.atk,
-      def:req.body.def,
-      critRate:req.body.critRate,
-      critDamage:req.body.critDamage
-    }).then((answer)=>{
+    db.Character.create(req.body).then((answer)=>{
+
+    // db.Character.create({
+    //   name:req.body.name,
+    //   ascensionPhase:req.body.ascensionPhase,
+    //   level:req.body.level,
+    //   hp:req.body.hp,
+    //   atk:req.body.atk,
+    //   def:req.body.def,
+    //   critRate:req.body.critRate,
+    //   critDamage:req.body.critDamage
+    // }).then((answer)=>{
+
       // console.log(req.body);
       console.log(answer);
       res.send(200);
