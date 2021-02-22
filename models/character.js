@@ -4,7 +4,7 @@ module.exports = function(sequelize, Datatypes){
           allowNull:false},
     ascensionPhase:{type:Datatypes.INTEGER,
           allowNull:false},
-    level:{type:Datatypes.STRING,
+    level:{type:Datatypes.INTEGER,
           allowNull:false},
     hp:{type:Datatypes.INTEGER,
           allowNull:false},
