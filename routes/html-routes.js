@@ -1,4 +1,5 @@
 var path = require("path");
+const db = require("../models");
 
 module.exports = function(app) {
 
@@ -12,6 +13,14 @@ module.exports = function(app) {
     res.render('adding')
   });
 
+
+  app.get('/:character',function(req,res){
+    const character = req.params.character;
+    db.Character.findAll({where :{
+      name = character
+    }}).then(data => res.json(data));
+    //then build a handle bar for this route;
+  })
   // app.get('/adding', function(req,res){
   //   res.sendFile(path.join(__dirname,"../public/adding.html"))
   //   // res.json('add data page')
